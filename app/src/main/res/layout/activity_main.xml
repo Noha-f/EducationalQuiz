@@ -1,5 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/scroll_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -12,11 +12,11 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp">
+            android:layout_marginBottom="@dimen/welcome_margin_bottom">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="550dp"
+                android:layout_height="600dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/worldwf" />
 
@@ -31,57 +31,56 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Welcome"
+                    android:text="@string/welcoming"
                     android:textAllCaps="true"
                     android:textColor="#FFFFFF"
-                    android:textSize="22sp"
+                    android:textSize="@dimen/text_large"
                     android:textStyle="bold" />
 
                 <EditText
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/edittextstyle"
                     android:gravity="center_horizontal"
-                    android:hint="Please Enter Your Name"
+                    android:hint="@string/name_input"
                     android:imeOptions="actionDone"
                     android:inputType="textCapWords"
                     android:padding="5dp"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/text_name" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_margin="25dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/margin"
                     android:background="#90CAF9"
                     android:onClick="goToQuiz"
-                    android:text="Start" />
+                    android:text="@string/start" />
             </LinearLayout>
         </RelativeLayout>
 
 
         <ImageView
-            android:id="@+id/noha_test"
+            android:id="@+id/quiz_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/margin"
             android:adjustViewBounds="true"
             android:src="@drawable/population" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:text="(1) Which country has the largest population in the world?" />
+            style="@style/questions"
+            android:text="@string/first_q" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
             android:orientation="horizontal">
 
             <CheckBox
@@ -89,22 +88,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="India" />
+                android:text="@string/india" />
 
             <CheckBox
                 android:id="@+id/one_B"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="USA" />
+                android:text="@string/usa" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginBottom="@dimen/question_margin_bottom"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
             android:orientation="horizontal">
 
             <CheckBox
@@ -112,20 +111,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="China" />
+                android:text="@string/china" />
 
             <CheckBox
                 android:id="@+id/one_D"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Brazil" />
+                android:text="@string/brazil" />
         </LinearLayout>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/margin"
             android:scaleType="fitXY"
             android:src="@drawable/river"
 
@@ -134,23 +133,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:text="(2) What is the longest river in the world?" />
+            style="@style/questions"
+            android:text="@string/second_q" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp">
+            android:layout_marginBottom="@dimen/question_margin_bottom"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin">
 
             <RadioButton
                 android:id="@+id/two_A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mississippi"
+                android:text="@string/mississippi"
 
                 />
 
@@ -158,7 +155,7 @@
                 android:id="@+id/two_B"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nile"
+                android:text="@string/nile"
 
                 />
 
@@ -166,20 +163,20 @@
                 android:id="@+id/two_C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Amazon" />
+                android:text="@string/amazon" />
 
             <RadioButton
                 android:id="@+id/two_D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Congo" />
+                android:text="@string/congo" />
 
         </RadioGroup>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/margin"
             android:adjustViewBounds="true"
             android:src="@drawable/wonders"
 
@@ -188,18 +185,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:text="(3) The Great Pyramid of Giza is one of the ancient Seven Wonders of the World, in which country is it located?" />
+            style="@style/questions"
+            android:text="@string/third_q" />
 
         <EditText
             android:id="@+id/three"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginBottom="@dimen/question_margin_bottom"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
             android:background="@drawable/edittextstyle"
             android:hint=" ................. "
             android:imeOptions="actionDone"
@@ -209,23 +204,21 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/margin"
             android:adjustViewBounds="true"
             android:src="@drawable/francophone" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:text="(4) Which two of the below countries have French as an official language?" />
+            style="@style/questions"
+            android:text="@string/fourth_q" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
             android:orientation="horizontal">
 
             <CheckBox
@@ -233,22 +226,22 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Belgium" />
+                android:text="@string/belgium" />
 
             <CheckBox
                 android:id="@+id/four_B"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Algeria" />
+                android:text="@string/algeria" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginBottom="@dimen/question_margin_bottom"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
             android:orientation="horizontal">
 
             <CheckBox
@@ -256,20 +249,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Austria" />
+                android:text="@string/austria" />
 
             <CheckBox
                 android:id="@+id/four_D"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Djibouti" />
+                android:text="@string/djibouti" />
         </LinearLayout>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/margin"
             android:adjustViewBounds="true"
             android:src="@drawable/languages"
 
@@ -278,23 +271,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:text="(5) What is the most spoken language in the world?" />
+            style="@style/questions"
+            android:text="@string/fifth_q" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp">
+            android:layout_marginBottom="@dimen/question_margin_bottom"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin">
 
             <RadioButton
                 android:id="@+id/five_A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chinese"
+                android:text="@string/chinese"
 
                 />
 
@@ -302,7 +293,7 @@
                 android:id="@+id/five_B"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="English"
+                android:text="@string/english"
 
                 />
 
@@ -310,20 +301,20 @@
                 android:id="@+id/five_C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Spanish" />
+                android:text="@string/spanish" />
 
             <RadioButton
                 android:id="@+id/five_D"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Arabic" />
+                android:text="@string/arabic" />
 
         </RadioGroup>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/margin"
             android:adjustViewBounds="true"
             android:src="@drawable/turkey"
 
@@ -332,18 +323,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
-            android:text="(6) In which country is the Bosphorus bridge whick links Europe and Asia?" />
+            style="@style/questions"
+            android:text="@string/sixth_q" />
 
         <EditText
             android:id="@+id/six"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_marginBottom="@dimen/question_margin_bottom"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
             android:background="@drawable/edittextstyle"
             android:hint=" ................. "
             android:imeOptions="actionDone"
@@ -356,25 +345,20 @@
             android:layout_gravity="center_horizontal"
             android:background="#90CAF9"
             android:onClick="scoreCalculation"
-            android:text="Score" />
+            android:text="@string/score" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="25dp"
+            android:layout_margin="@dimen/margin"
             android:background="#689F38"
             android:onClick="goToAnswers"
-            android:paddingLeft="25dp"
-            android:paddingRight="25dp"
-            android:text="Check the right answers  >>"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:text="@string/check_answers"
             android:textColor="#FFFFFF" />
 
-        <TextView
-            android:id="@+id/test"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Me" />
 
     </LinearLayout>
 
